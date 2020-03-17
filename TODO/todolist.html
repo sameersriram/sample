@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html" content-Type="">
+    <title>TodoList WebApp</title>
+    <link rel="stylesheet" type="text/css" href="./styles/todolist.css" />
+</head>
+
+
+<body>
+    <h1 class="h1-element">
+        TODOLIST
+    </h1>
+    <form name="inputForm">
+        <div class="textInput">
+            <input type="text" placeholder="enter your task" id="inputButton" length="50" />
+            <a href="#" class="saveButton">ADD TASK</a>
+        </div>
+    </form>
+    <div class="itemSection">
+        <ul id="unordered-list">
+           
+        </ul>
+    </div>
+    <footer>
+        <div id="pending">pending&nbsp;&nbsp;&nbsp;<div>0</div>
+        </div>
+        <div id="completed">completed&nbsp;&nbsp;&nbsp;<div>0</div>
+        </div>
+    </footer>
+</body>
+<script type="module" src="./controller/main.js" defer ></script>
+</html>
