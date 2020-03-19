@@ -1,18 +1,16 @@
-import {displayList} from '../views/list.js';
 import {valid} from '../controller/validInput.js';
+import {autoDisplay} from '../controller/autodisplay.js';
+import {localStorageClicked,sessionStorageClicked} from '../controller/storageClicked.js';
 
 export let id = 1;
-export let list = [];
+export let listLocal = [];
+export let listSession=[];
 
+
+
+document.querySelector('.dropdown-content').children[0].addEventListener('click',localStorageClicked,false );
+document.querySelector('.dropdown-content').children[1].addEventListener('click',sessionStorageClicked,false);
 
 document.querySelector('.saveButton').addEventListener('click', valid , false);
-(function () {
-    var temp=[]
-    var length = JSON.parse(localStorage.getItem('item-list')).length;
-    for (var i = 0; i < length; i++) {
-         temp.push(JSON.parse(localStorage.getItem('item-list'))[i]);
-    }
-    for(var i in temp){
-        displayList(temp[i]);
-    }
-})();
+
+autoDisplay();

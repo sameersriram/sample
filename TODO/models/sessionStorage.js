@@ -1,8 +1,10 @@
-import { list } from '../controller/main.js';
-
+import { listSession } from '../controller/main.js';
+import {inputElement} from '../views/list.js';
 export function sessionPush () {
-  sessionStorage.setItem('items', JSON.stringify(list));
+  listSession.push(inputElement);
+  sessionStorage.setItem('item', JSON.stringify(listSession));
 }
-export function sessionPop () {
- sessionStorage.setItem('item', JSON.stringify(list));
+export function sessionPop (element) {
+ listSession.splice(listSession.indexOf(element),1);
+ sessionStorage.setItem('item', JSON.stringify(listSession));
 }
