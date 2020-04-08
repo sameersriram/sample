@@ -17,5 +17,5 @@ export function delet(ele) {
     }
     ele.parentElement.remove();
     element=itemRemove.replace(/[\r\n\s]+/gm,"");
-   (delStore)?sessionPop(element):localPop(element);
+   (delStore)?sessionPop(element,tempId):localPop(element,tempId);
 }
